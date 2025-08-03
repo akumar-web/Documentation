@@ -21,25 +21,14 @@
   Avoid putting AWS keys, `kubeconfig`, tokens, or any secrets directly in your code or workflow files.
 
 -  **Use Environment Secrets in GitHub Actions**  
-  Reference secrets securely in your workflow:
-  ```yaml
-  env:
-    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    KUBECONFIG_DATA: ${{ secrets.KUBECONFIG_DATA }}
+  Reference secrets securely in your workflow
+  
 
 ## ✅ Step 3: Secure GitHub Actions Workflows
 
 - 🔐 **Restrict permissions in `.github/workflows/*.yml`**
 
-  Minimize the scope of GitHub token access using `permissions:` block in workflows:
-
-  ```yaml
-  permissions:
-    contents: read
-    id-token: write
-
-
+  Minimize the scope of GitHub token access using `permissions:` block in workflows.
 
 
 
